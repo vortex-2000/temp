@@ -1,0 +1,11 @@
+<div class="container">
+
+  Enter name:<input type="text" [(ngModel)]="pname">
+ 
+
+  <app-child [first]="pname"  (eventEmitter)="getResponse($event)"></app-child> 
+
+  <div *ngIf="flag">
+    Product price is:{{result}}
+  </div>
+</div>
